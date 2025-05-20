@@ -5,6 +5,6 @@ ExecuteTasks();
 
 void ExecuteTasks()
 {
-    Task1 task1 = new Task1();
-    task1.Main();
+    Task7 task = new Task7(); //current task
+    task.Main();
 }
