@@ -8,13 +8,33 @@
         public List<string> Execute(string path)
         {
             // TODO: зчитати через StreamReader.ReadLine(), сортувати list.OrderBy(x => x.Length)
-            throw new NotImplementedException();
+
+            List<string> lines = new List<string>();
+
+            var reader = new StreamReader(path);
+
+            while (reader.EndOfStream == false)
+            {
+                lines.Add(reader.ReadLine());
+            }
+
+            lines = lines.OrderBy(x => x.Length).ToList();
+            return lines;
         }
 
         public void Main()
         {
             // TODO: демонстрація відсортованих рядків
-            throw new NotImplementedException();
+
+            Console.Write("Enter file path: ");
+            string path = Console.ReadLine();
+            List<string> sortedLines = Execute(path);
+
+            Console.WriteLine("Sorted lines by length:");
+            foreach (var line in sortedLines)
+            {
+                Console.WriteLine(line);
+            }
         }
     }
 }

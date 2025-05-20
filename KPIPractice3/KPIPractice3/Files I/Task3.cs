@@ -15,13 +15,18 @@ namespace KPIPractice3.Files_I
         public string Execute(string path)
         {
             // TODO: реалізувати за допомогою File.ReadAllText
-            throw new NotImplementedException();
+            return File.ReadAllText(path);
         }
 
         public void Main()
         {
             // TODO: приклад читання та виведення вмісту файлу
-            throw new NotImplementedException();
+
+            Console.Write("Enter file path: ");
+            string path = Console.ReadLine();
+            string text = Execute(path);
+            
+            Console.WriteLine($"File \"{path}\" contains contents:\n{text}");
         }
     }
 }

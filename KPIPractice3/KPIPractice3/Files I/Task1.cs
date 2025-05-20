@@ -9,13 +9,23 @@
         public bool Execute(string path)
         {
             // TODO: реалізувати за допомогою File.Exists
-            throw new NotImplementedException();
+            return File.Exists(path);
         }
 
         public void Main()
         {
             // TODO: приклад виклику Execute та виведення результату
-            throw new NotImplementedException();
+            Console.Write("Enter file path: ");
+            string path = Console.ReadLine();
+            bool exists = Execute(path);
+            if (exists)
+            {
+                Console.WriteLine("File exists.");
+            }
+            else
+            {
+                Console.WriteLine("File doesn't exist.");
+            }
         }
     }
 }

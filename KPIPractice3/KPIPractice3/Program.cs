@@ -11,12 +11,12 @@ class Program
 
         Console.WriteLine("=== Демонстрація тасок ===\n");
 
-        new Task1().Main();
+        //new Task1().Main();
         //new Task2().Main();
         //new Task3().Main();
         //new Task4().Main();
         //new Task5().Main();
-        //new Task6().Main();
+        new Task6().Main();
         //new Task7().Main();
         //new Task8().Main();
         //new Task9().Main();

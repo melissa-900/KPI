@@ -9,13 +9,23 @@
         public void Execute(string path, string contents)
         {
             // TODO: реалізувати за допомогою File.WriteAllText
-            throw new NotImplementedException();
+            File.WriteAllText(path, contents);
         }
 
         public void Main()
         {
             // TODO: приклад створення файлу та запису тексту
-            throw new NotImplementedException();
+
+            Console.Write("Enter file name: ");
+            string fileName = Console.ReadLine();
+            Console.Write("Enter file contents: ");
+            string contents = Console.ReadLine();
+
+            File.Create(fileName).Close();
+            Execute(fileName, contents);
+
+            string text = File.ReadAllText(fileName);
+            Console.WriteLine($"File '{fileName}' created with contents:\n{text}");
         }
     }
 }
